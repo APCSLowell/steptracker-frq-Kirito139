@@ -4,6 +4,10 @@ public class StepTracker {
     private int min;
     private ArrayList<Integer> steps = new ArrayList<Integer>();
 
+    public StepTracker(int min) {
+        this.min = min;
+    }
+
     public void addDailySteps(int in) {
         steps.add(in);
         return;
