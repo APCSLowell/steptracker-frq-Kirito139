@@ -4,28 +4,27 @@ public class StepTracker {
     private int min;
     private ArrayList<Integer> steps = new ArrayList<Integer>();
 
-    public StepTracker(int min) {
-        this.min = min;
+    public StepTracker(int foo) {
+        min = foo;
     }
 
     public void addDailySteps(int in) {
         steps.add(in);
-        return;
     }
 
     public int activeDays() {
-        int foo = 0;
+        int actives = 0;
         for (int day : steps) {
-            if (day >= min) foo ++;
+            if (day >= min) actives++;
         }
-        return foo;
+        return actives;
     }
 
     public double averageSteps() {
         double baz = 0;
         int days = 0;
         for (int day : steps) {
-            days ++;
+            days++;
             baz += day;
         }
         return (double)(baz) / days;
