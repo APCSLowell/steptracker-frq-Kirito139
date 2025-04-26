@@ -27,6 +27,7 @@ public class StepTracker {
             days++;
             baz += day;
         }
+        if (days == 0) return 0.0;
         return (double)(baz) / days;
     }
 } 
